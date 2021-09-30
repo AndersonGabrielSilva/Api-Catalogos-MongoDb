@@ -14,7 +14,8 @@ namespace ApiCatalogo_MongoDb.Data
             bool existProduct = productColletion.Find(p => true).Any();
             if (!existProduct)
             {
-                productColletion.InsertManyAsync(GetMyProducts());
+                var documentos = GetMyProducts();
+                productColletion.InsertManyAsync(documentos).Wait();
             }
         }
 
@@ -24,7 +25,7 @@ namespace ApiCatalogo_MongoDb.Data
             {
                 new Product()
                 {
-                    Id = Guid.NewGuid().ToString().Substring(0,20),
+                    Id = Guid.NewGuid().ToString().Replace("-","").Substring(0,24),
                     Name = "Sansung A50",
                     Description = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -36,7 +37,7 @@ namespace ApiCatalogo_MongoDb.Data
                 },
                 new Product()
                 {
-                    Id = Guid.NewGuid().ToString().Substring(0,20),
+                    Id = Guid.NewGuid().ToString().Replace("-","").Substring(0,24),
                     Name = "Motorola Razor",
                     Description = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -48,7 +49,7 @@ namespace ApiCatalogo_MongoDb.Data
                 },
                 new Product()
                 {
-                    Id = Guid.NewGuid().ToString().Substring(0,20),
+                    Id = Guid.NewGuid().ToString().Replace("-","").Substring(0,24),
                     Name = "SmartTV",
                     Description = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -60,7 +61,7 @@ namespace ApiCatalogo_MongoDb.Data
                 },
                 new Product()
                 {
-                    Id = Guid.NewGuid().ToString().Substring(0,20),
+                    Id = Guid.NewGuid().ToString().Replace("-","").Substring(0,24),
                     Name = "Produto Teste",
                     Description = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -72,7 +73,7 @@ namespace ApiCatalogo_MongoDb.Data
                 },
                 new Product()
                 {
-                    Id = Guid.NewGuid().ToString().Substring(0,20),
+                    Id = Guid.NewGuid().ToString().Replace("-","").Substring(0,24),
                     Name = "Motorola S5",
                     Description = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -84,7 +85,7 @@ namespace ApiCatalogo_MongoDb.Data
                 },
                 new Product()
                 {
-                    Id = Guid.NewGuid().ToString().Substring(0,20),
+                    Id = Guid.NewGuid().ToString().Replace("-","").Substring(0,24),
                     Name = "Motorola V8",
                     Description = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make

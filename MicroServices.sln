@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCatalogo-MongoDb", "ApiCatalogo-MongoDb\ApiCatalogo-MongoDb.csproj", "{A9A90138-6996-4658-9C20-3977E08D2729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiCatalogo-MongoDb", "ApiCatalogo-MongoDb\ApiCatalogo-MongoDb.csproj", "{A9A90138-6996-4658-9C20-3977E08D2729}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AE894F4D-156C-4494-9156-0F220459646E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A9A90138-6996-4658-9C20-3977E08D2729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9A90138-6996-4658-9C20-3977E08D2729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9A90138-6996-4658-9C20-3977E08D2729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE894F4D-156C-4494-9156-0F220459646E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE894F4D-156C-4494-9156-0F220459646E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE894F4D-156C-4494-9156-0F220459646E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE894F4D-156C-4494-9156-0F220459646E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

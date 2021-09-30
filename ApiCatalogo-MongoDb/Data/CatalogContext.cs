@@ -13,12 +13,15 @@ namespace ApiCatalogo_MongoDb.Data
         public CatalogContext(IConfiguration configuration)
         {
             //Configurando Contexto do Banco
-            var client = new MongoClient(configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
+            var server = configuration.GetValue<string>("DatabaseSettings:ConnectionString");
+            var client = new MongoClient(server);
 
-            var database = client.GetDatabase(configuration.GetValue<string>("DatabaseSettings:DatabaseName"));
+            var namedb = configuration.GetValue<string>("DatabaseSettings:DatabaseName");
+            var database = client.GetDatabase(namedb);
 
             //Configurando Dados de Produtos
-            Products = database.GetCollection<Product>(configuration.GetValue<string>("DatabaseSettings:CollectionName"));
+            var collectionName = configuration.GetValue<string>("DatabaseSettings:CollectionName");
+            Products = database.GetCollection<Product>(collectionName);
 
             CatalogContextSeed.SeedData(Products);
         }
